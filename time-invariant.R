@@ -29,7 +29,7 @@ t_invariant_max <- function(nest_var, variable, ...){
 }
 
 t_invariant_range <- function(nest_var, variable, ...){ 
-  map_dbl({{nest_var}}, function(x)  x %>% pull({{variable}}) %>% range(...)) %>% diff(...)
+  map_dbl({{nest_var}}, function(x)  x %>% pull({{variable}}) %>% range(...) %>% diff(...))
 }
 
 t_invariant_iqr <- function(nest_var, variable, ...){ 
